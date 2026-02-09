@@ -1,0 +1,58 @@
+{
+  "name": "electron-mcp-server",
+  "version": "1.0.0",
+  "description": "Electron MCP server for AI-powered desktop application testing with WebdriverIO",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "electron-mcp-server": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/bin/cli.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "electron",
+    "mcp",
+    "webdriverio",
+    "testing",
+    "ai-agents",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "desktop-automation"
+  ],
+  "author": "R. van der Horst",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/learn-automated-testing/electron-mcp-server.git"
+  },
+  "homepage": "https://github.com/learn-automated-testing/electron-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/learn-automated-testing/electron-mcp-server/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "wdio-electron-service": "^7.0.0",
+    "webdriverio": "^9.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "electron": "^28.3.3",
+    "typescript": "^5.7.0"
+  }
+}
